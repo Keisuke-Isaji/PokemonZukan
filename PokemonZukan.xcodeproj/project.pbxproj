@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A16B0BBC2BD61E7F001772BD /* PokemonZukanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BBB2BD61E7F001772BD /* PokemonZukanApp.swift */; };
+		A16B0BBE2BD61E7F001772BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BBD2BD61E7F001772BD /* ContentView.swift */; };
+		A16B0BC02BD61E80001772BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16B0BBF2BD61E80001772BD /* Assets.xcassets */; };
+		A16B0BC32BD61E80001772BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16B0BC22BD61E80001772BD /* Preview Assets.xcassets */; };
+		A16B0BCD2BD61E81001772BD /* PokemonZukanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BCC2BD61E81001772BD /* PokemonZukanTests.swift */; };
+		A16B0BD72BD61E81001772BD /* PokemonZukanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BD62BD61E81001772BD /* PokemonZukanUITests.swift */; };
+		A16B0BD92BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BD82BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A16B0BC92BD61E81001772BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16B0BB02BD61E7F001772BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A16B0BB72BD61E7F001772BD;
+			remoteInfo = PokemonZukan;
+		};
+		A16B0BD32BD61E81001772BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A16B0BB02BD61E7F001772BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A16B0BB72BD61E7F001772BD;
+			remoteInfo = PokemonZukan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A16B0BB82BD61E7F001772BD /* PokemonZukan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonZukan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16B0BBB2BD61E7F001772BD /* PokemonZukanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanApp.swift; sourceTree = "<group>"; };
+		A16B0BBD2BD61E7F001772BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A16B0BBF2BD61E80001772BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A16B0BC22BD61E80001772BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A16B0BC82BD61E81001772BD /* PokemonZukanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonZukanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16B0BCC2BD61E81001772BD /* PokemonZukanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanTests.swift; sourceTree = "<group>"; };
+		A16B0BD22BD61E81001772BD /* PokemonZukanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonZukanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16B0BD62BD61E81001772BD /* PokemonZukanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanUITests.swift; sourceTree = "<group>"; };
+		A16B0BD82BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A16B0BB52BD61E7F001772BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16B0BC52BD61E81001772BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16B0BCF2BD61E81001772BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A16B0BAF2BD61E7F001772BD = {
+			isa = PBXGroup;
+			children = (
+				A16B0BBA2BD61E7F001772BD /* PokemonZukan */,
+				A16B0BCB2BD61E81001772BD /* PokemonZukanTests */,
+				A16B0BD52BD61E81001772BD /* PokemonZukanUITests */,
+				A16B0BB92BD61E7F001772BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A16B0BB92BD61E7F001772BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A16B0BB82BD61E7F001772BD /* PokemonZukan.app */,
+				A16B0BC82BD61E81001772BD /* PokemonZukanTests.xctest */,
+				A16B0BD22BD61E81001772BD /* PokemonZukanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A16B0BBA2BD61E7F001772BD /* PokemonZukan */ = {
+			isa = PBXGroup;
+			children = (
+				A16B0BBB2BD61E7F001772BD /* PokemonZukanApp.swift */,
+				A16B0BBD2BD61E7F001772BD /* ContentView.swift */,
+				A16B0BBF2BD61E80001772BD /* Assets.xcassets */,
+				A16B0BC12BD61E80001772BD /* Preview Content */,
+			);
+			path = PokemonZukan;
+			sourceTree = "<group>";
+		};
+		A16B0BC12BD61E80001772BD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A16B0BC22BD61E80001772BD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A16B0BCB2BD61E81001772BD /* PokemonZukanTests */ = {
+			isa = PBXGroup;
+			children = (
+				A16B0BCC2BD61E81001772BD /* PokemonZukanTests.swift */,
+			);
+			path = PokemonZukanTests;
+			sourceTree = "<group>";
+		};
+		A16B0BD52BD61E81001772BD /* PokemonZukanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A16B0BD62BD61E81001772BD /* PokemonZukanUITests.swift */,
+				A16B0BD82BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift */,
+			);
+			path = PokemonZukanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A16B0BB72BD61E7F001772BD /* PokemonZukan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16B0BDC2BD61E81001772BD /* Build configuration list for PBXNativeTarget "PokemonZukan" */;
+			buildPhases = (
+				A16B0BB42BD61E7F001772BD /* Sources */,
+				A16B0BB52BD61E7F001772BD /* Frameworks */,
+				A16B0BB62BD61E7F001772BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PokemonZukan;
+			productName = PokemonZukan;
+			productReference = A16B0BB82BD61E7F001772BD /* PokemonZukan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A16B0BC72BD61E81001772BD /* PokemonZukanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16B0BDF2BD61E81001772BD /* Build configuration list for PBXNativeTarget "PokemonZukanTests" */;
+			buildPhases = (
+				A16B0BC42BD61E81001772BD /* Sources */,
+				A16B0BC52BD61E81001772BD /* Frameworks */,
+				A16B0BC62BD61E81001772BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A16B0BCA2BD61E81001772BD /* PBXTargetDependency */,
+			);
+			name = PokemonZukanTests;
+			productName = PokemonZukanTests;
+			productReference = A16B0BC82BD61E81001772BD /* PokemonZukanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A16B0BD12BD61E81001772BD /* PokemonZukanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A16B0BE22BD61E81001772BD /* Build configuration list for PBXNativeTarget "PokemonZukanUITests" */;
+			buildPhases = (
+				A16B0BCE2BD61E81001772BD /* Sources */,
+				A16B0BCF2BD61E81001772BD /* Frameworks */,
+				A16B0BD02BD61E81001772BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A16B0BD42BD61E81001772BD /* PBXTargetDependency */,
+			);
+			name = PokemonZukanUITests;
+			productName = PokemonZukanUITests;
+			productReference = A16B0BD22BD61E81001772BD /* PokemonZukanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A16B0BB02BD61E7F001772BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A16B0BB72BD61E7F001772BD = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A16B0BC72BD61E81001772BD = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A16B0BB72BD61E7F001772BD;
+					};
+					A16B0BD12BD61E81001772BD = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A16B0BB72BD61E7F001772BD;
+					};
+				};
+			};
+			buildConfigurationList = A16B0BB32BD61E7F001772BD /* Build configuration list for PBXProject "PokemonZukan" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A16B0BAF2BD61E7F001772BD;
+			productRefGroup = A16B0BB92BD61E7F001772BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A16B0BB72BD61E7F001772BD /* PokemonZukan */,
+				A16B0BC72BD61E81001772BD /* PokemonZukanTests */,
+				A16B0BD12BD61E81001772BD /* PokemonZukanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A16B0BB62BD61E7F001772BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16B0BC32BD61E80001772BD /* Preview Assets.xcassets in Resources */,
+				A16B0BC02BD61E80001772BD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16B0BC62BD61E81001772BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16B0BD02BD61E81001772BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A16B0BB42BD61E7F001772BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16B0BBE2BD61E7F001772BD /* ContentView.swift in Sources */,
+				A16B0BBC2BD61E7F001772BD /* PokemonZukanApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16B0BC42BD61E81001772BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16B0BCD2BD61E81001772BD /* PokemonZukanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A16B0BCE2BD61E81001772BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A16B0BD92BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift in Sources */,
+				A16B0BD72BD61E81001772BD /* PokemonZukanUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A16B0BCA2BD61E81001772BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A16B0BB72BD61E7F001772BD /* PokemonZukan */;
+			targetProxy = A16B0BC92BD61E81001772BD /* PBXContainerItemProxy */;
+		};
+		A16B0BD42BD61E81001772BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A16B0BB72BD61E7F001772BD /* PokemonZukan */;
+			targetProxy = A16B0BD32BD61E81001772BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A16B0BDA2BD61E81001772BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A16B0BDB2BD61E81001772BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A16B0BDD2BD61E81001772BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PokemonZukan/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HK327L86H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sajiemon.PokemonZukan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A16B0BDE2BD61E81001772BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PokemonZukan/Preview Content\"";
+				DEVELOPMENT_TEAM = 7HK327L86H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sajiemon.PokemonZukan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A16B0BE02BD61E81001772BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7HK327L86H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sajiemon.PokemonZukanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonZukan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokemonZukan";
+			};
+			name = Debug;
+		};
+		A16B0BE12BD61E81001772BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7HK327L86H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sajiemon.PokemonZukanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PokemonZukan.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PokemonZukan";
+			};
+			name = Release;
+		};
+		A16B0BE32BD61E81001772BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7HK327L86H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sajiemon.PokemonZukanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokemonZukan;
+			};
+			name = Debug;
+		};
+		A16B0BE42BD61E81001772BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7HK327L86H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sajiemon.PokemonZukanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PokemonZukan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A16B0BB32BD61E7F001772BD /* Build configuration list for PBXProject "PokemonZukan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16B0BDA2BD61E81001772BD /* Debug */,
+				A16B0BDB2BD61E81001772BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A16B0BDC2BD61E81001772BD /* Build configuration list for PBXNativeTarget "PokemonZukan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16B0BDD2BD61E81001772BD /* Debug */,
+				A16B0BDE2BD61E81001772BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A16B0BDF2BD61E81001772BD /* Build configuration list for PBXNativeTarget "PokemonZukanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16B0BE02BD61E81001772BD /* Debug */,
+				A16B0BE12BD61E81001772BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A16B0BE22BD61E81001772BD /* Build configuration list for PBXNativeTarget "PokemonZukanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A16B0BE32BD61E81001772BD /* Debug */,
+				A16B0BE42BD61E81001772BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A16B0BB02BD61E7F001772BD /* Project object */;
+}
