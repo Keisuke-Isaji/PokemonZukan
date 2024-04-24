@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1222D5C2BD8C10C000495D8 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1222D5B2BD8C10C000495D8 /* PokemonDetailView.swift */; };
 		A16B0BBC2BD61E7F001772BD /* PokemonZukanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BBB2BD61E7F001772BD /* PokemonZukanApp.swift */; };
-		A16B0BBE2BD61E7F001772BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BBD2BD61E7F001772BD /* ContentView.swift */; };
+		A16B0BBE2BD61E7F001772BD /* PokemonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BBD2BD61E7F001772BD /* PokemonListView.swift */; };
 		A16B0BC02BD61E80001772BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16B0BBF2BD61E80001772BD /* Assets.xcassets */; };
 		A16B0BC32BD61E80001772BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A16B0BC22BD61E80001772BD /* Preview Assets.xcassets */; };
 		A16B0BCD2BD61E81001772BD /* PokemonZukanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BCC2BD61E81001772BD /* PokemonZukanTests.swift */; };
 		A16B0BD72BD61E81001772BD /* PokemonZukanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BD62BD61E81001772BD /* PokemonZukanUITests.swift */; };
 		A16B0BD92BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BD82BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift */; };
+		A16B0BE62BD65FDA001772BD /* PokeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BE52BD65FDA001772BD /* PokeLoader.swift */; };
+		A16B0BE92BD66A61001772BD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A16B0BE82BD66A61001772BD /* Alamofire */; };
+		A16B0BEB2BD66A61001772BD /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A16B0BEA2BD66A61001772BD /* AlamofireDynamic */; };
+		A16B0BED2BD6B4C0001772BD /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BEC2BD6B4C0001772BD /* Pokemon.swift */; };
+		A16B0BF12BD6BE58001772BD /* PokemonCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16B0BF02BD6BE58001772BD /* PokemonCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A1222D5B2BD8C10C000495D8 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		A16B0BB82BD61E7F001772BD /* PokemonZukan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonZukan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16B0BBB2BD61E7F001772BD /* PokemonZukanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanApp.swift; sourceTree = "<group>"; };
-		A16B0BBD2BD61E7F001772BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A16B0BBD2BD61E7F001772BD /* PokemonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListView.swift; sourceTree = "<group>"; };
 		A16B0BBF2BD61E80001772BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A16B0BC22BD61E80001772BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A16B0BC82BD61E81001772BD /* PokemonZukanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonZukanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,9 @@
 		A16B0BD22BD61E81001772BD /* PokemonZukanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonZukanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A16B0BD62BD61E81001772BD /* PokemonZukanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanUITests.swift; sourceTree = "<group>"; };
 		A16B0BD82BD61E81001772BD /* PokemonZukanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonZukanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A16B0BE52BD65FDA001772BD /* PokeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeLoader.swift; sourceTree = "<group>"; };
+		A16B0BEC2BD6B4C0001772BD /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		A16B0BF02BD6BE58001772BD /* PokemonCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A16B0BE92BD66A61001772BD /* Alamofire in Frameworks */,
+				A16B0BEB2BD66A61001772BD /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				A16B0BBB2BD61E7F001772BD /* PokemonZukanApp.swift */,
-				A16B0BBD2BD61E7F001772BD /* ContentView.swift */,
+				A16B0BBD2BD61E7F001772BD /* PokemonListView.swift */,
+				A16B0BF02BD6BE58001772BD /* PokemonCardView.swift */,
+				A1222D5B2BD8C10C000495D8 /* PokemonDetailView.swift */,
+				A16B0BE52BD65FDA001772BD /* PokeLoader.swift */,
+				A16B0BEC2BD6B4C0001772BD /* Pokemon.swift */,
 				A16B0BBF2BD61E80001772BD /* Assets.xcassets */,
 				A16B0BC12BD61E80001772BD /* Preview Content */,
 			);
@@ -143,6 +159,10 @@
 			dependencies = (
 			);
 			name = PokemonZukan;
+			packageProductDependencies = (
+				A16B0BE82BD66A61001772BD /* Alamofire */,
+				A16B0BEA2BD66A61001772BD /* AlamofireDynamic */,
+			);
 			productName = PokemonZukan;
 			productReference = A16B0BB82BD61E7F001772BD /* PokemonZukan.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +235,9 @@
 				Base,
 			);
 			mainGroup = A16B0BAF2BD61E7F001772BD;
+			packageReferences = (
+				A16B0BE72BD66A04001772BD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = A16B0BB92BD61E7F001772BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A16B0BBE2BD61E7F001772BD /* ContentView.swift in Sources */,
+				A16B0BBE2BD61E7F001772BD /* PokemonListView.swift in Sources */,
+				A16B0BF12BD6BE58001772BD /* PokemonCardView.swift in Sources */,
+				A16B0BED2BD6B4C0001772BD /* Pokemon.swift in Sources */,
+				A16B0BE62BD65FDA001772BD /* PokeLoader.swift in Sources */,
 				A16B0BBC2BD61E7F001772BD /* PokemonZukanApp.swift in Sources */,
+				A1222D5C2BD8C10C000495D8 /* PokemonDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +615,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A16B0BE72BD66A04001772BD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A16B0BE82BD66A61001772BD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A16B0BE72BD66A04001772BD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A16B0BEA2BD66A61001772BD /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A16B0BE72BD66A04001772BD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A16B0BB02BD61E7F001772BD /* Project object */;
 }
