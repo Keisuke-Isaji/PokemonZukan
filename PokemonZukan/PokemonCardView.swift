@@ -11,10 +11,7 @@ struct PokemonCardView: View {
     let pokemon: Pokemon
 
     var body: some View {
-        ZStack {
-            NavigationStack {
-                
-            }
+        NavigationLink(destination: PokemonDetailView(pokemonId: pokemon.id ?? 0, name:pokemon.name.capitalized, url: pokemon.url)){
             HStack {
                 AsyncImage(url: pokemon.imageURL) { image in
                     image.resizable()
@@ -37,5 +34,4 @@ struct PokemonCardView: View {
 
 #Preview {
     PokemonCardView(pokemon: Pokemon(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"))
-
 }

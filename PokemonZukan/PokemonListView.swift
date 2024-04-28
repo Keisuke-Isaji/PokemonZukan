@@ -12,21 +12,21 @@ struct PokemonListView: View {
 
     var body: some View {
         VStack {
-            HStack {
-                Image(.pokemonLogo)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Text("ポケモン図鑑")
-                    .fontWeight(.bold)
-                    .font(.largeTitle)
-            }
+//            HStack {
+//                Image(.pokemonLogo)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                Text("図鑑(仮)")
+//                    .fontWeight(.bold)
+//                    .font(.largeTitle)
+//            }
             NavigationStack {
                 List(pokemonList,id: \.name) { pokemon in
                     PokemonCardView(pokemon: pokemon)
                 }
             }
             .onAppear() {
-                PokeLoader().loadPokemon { result in
+                PokeLoader().loadPokemonList { result in
                     switch result {
                     case .success(let pokemonList):
                         self.pokemonList = pokemonList

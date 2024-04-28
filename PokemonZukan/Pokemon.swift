@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct PokemonList: Decodable {
     let results: [Pokemon]
@@ -22,4 +23,23 @@ struct Pokemon: Decodable {
     var imageURL: URL? {
         return URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id ?? 0).png")
     }
+}
+
+struct PokemonDetail: Decodable {
+    let id: Int
+    var types: [PokemonType]
+
+    var imageURL: URL? {
+        return URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png")
+    }
+}
+
+struct PokemonType: Decodable {
+    let slot: Int
+    let type: TypeDetails
+}
+
+struct TypeDetails: Decodable {
+    let name: String
+    let url: String
 }
