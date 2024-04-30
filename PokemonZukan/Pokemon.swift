@@ -25,7 +25,7 @@ struct Pokemon: Decodable {
     }
 }
 
-struct PokemonDetail: Decodable {
+struct PokemonDetail: Decodable,Identifiable {
     let id: Int
     var types: [PokemonType]
 
@@ -35,6 +35,7 @@ struct PokemonDetail: Decodable {
 }
 
 struct PokemonType: Decodable {
+    var id: Int {slot}
     let slot: Int
     let type: TypeDetails
 }

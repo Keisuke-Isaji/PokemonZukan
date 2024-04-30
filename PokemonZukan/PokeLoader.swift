@@ -9,7 +9,7 @@ import Alamofire
 
 class PokeLoader {
     func loadPokemonList (completion: @escaping (Result<[Pokemon], Error>) -> ()) {
-        AF.request("https://pokeapi.co/api/v2/pokemon?limit=251").responseDecodable(of: PokemonList.self) { response in
+        AF.request("https://pokeapi.co/api/v2/pokemon").responseDecodable(of: PokemonList.self) { response in
 
             switch response.result {
             case .success(let pokemonList):

@@ -16,7 +16,7 @@ struct PokemonCardView: View {
                 AsyncImage(url: pokemon.imageURL) { image in
                     image.resizable()
                 } placeholder: {
-                    Image(systemName: "number")
+                    Image(.migawari)
                         .resizable()
                         .padding()
                 }

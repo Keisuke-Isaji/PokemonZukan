@@ -8,11 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct PokemonColorView: View {
-//    var id: Int
+class PokemonColor {
     var type: String
 
-    var color: Color {
+    init(type: String) {
+        self.type = type
+    }
+
+    func typeToColor() -> Color {
         switch type.lowercased() {
         case "grass":    return Color(red: 166 / 255, green: 193 / 255, blue: 50 / 255)
         case "poison":   return Color(red: 157 / 255, green: 121 / 255, blue: 199 / 255)
@@ -32,19 +35,24 @@ struct PokemonColorView: View {
         case "dragon":   return Color(red: 228 / 255, green: 134 / 255, blue: 91 / 255)
         case "fighting": return Color(red: 210 / 255, green: 105 / 255, blue: 106 / 255)
         case "ice":      return Color(red: 151 / 255, green: 231 / 255, blue: 244 / 255)
-        case "":      return Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255)
+        case "":      return Color(red: 200 / 255, green: 200 / 255, blue: 200 / 255).opacity(0.5)
 
-        default: do {return Color(red: 255 / 255, green: 255 / 255, blue: 255 / 255)}
+        default: do {return Color(red: 200 / 255, green: 200 / 255, blue: 200 / 255).opacity(0.5)
+        }
+
         }
     }
+}
 
+struct PokemonColorView: View {
+    var type: String
     var body: some View {
         Circle()
             .frame(height: 300)
-            .foregroundStyle(self.color)
+            .foregroundStyle(PokemonColor(type: type).typeToColor())
     }
 }
 
 #Preview {
-    PokemonColorView(type: "")
+    PokemonColorView(type: "grass")
 }
