@@ -12,20 +12,22 @@ struct PokemonDetailView: View {
     @State var pokemonDetail: PokemonDetail? = nil
     @State var isFavorite: Bool = false
     @State private var player: AVPlayer?
+    @State var pokemonTypesJP: [String] = [""]
+    @State var flavorText: String = "loading..."
 
     let pokemonId: Int
     let name: String
     let url: String
 
     var body: some View {
-        VStack {
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .top), content: {
+        VStack(spacing: 13) {
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
                 NavigationStack {
                     PokemonColorView(type: pokemonDetail?.types[0].type.name ?? "")}
-                .position(x:200, y:150)
                 .opacity(0.5)
                 .onAppear() {
-                    PokeLoader().loadPokemon(url: url) { result in
+                    let pokeLoader = PokeLoader()
+                    pokeLoader.loadPokemon(url: url) { result in
                         switch result {
                         case .success(let pokemon):
                             print(pokemon)
@@ -34,8 +36,17 @@ struct PokemonDetailView: View {
                             print(error)
                         }
                     }
-                    let playerItem = AVPlayerItem(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/1.ogg")!)
-                    self.player = AVPlayer(playerItem: playerItem)
+                    pokeLoader.loadPokemonSpecies(id: pokemonId) { result in
+                        switch result {
+                        case .success(let pokemons):
+                            print(pokemons)
+                            self.flavorText = pokemons.flavor_text_entries.filter({(pokemon) in pokemon.language.name == "ja"}).first?.flavor_text ?? pokemons.flavor_text_entries.filter({(pokemon) in pokemon.language.name == "en"}).first?.flavor_text ?? "loading..."
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                    //                    let playerItem = AVPlayerItem(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/legacy/1.ogg")!)
+                    //                    self.player = AVPlayer(playerItem: playerItem)
                 }
                 AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/\(pokemonId).png")){ image in
                     image.resizable()
@@ -51,11 +62,34 @@ struct PokemonDetailView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 300)
             })
-            Text(name.capitalized)
-                .fontWeight(.bold)
-                .font(.largeTitle)
-                .redacted(reason: self.pokemonDetail == nil ? .placeholder : [])
-            HStack {
+            HStack(alignment: .center) {
+                Text(name.capitalized)
+                    .fontWeight(.bold)
+                    .font(.largeTitle)
+                    .redacted(reason: self.pokemonDetail == nil ? .placeholder : [])
+                if (self.isFavorite) {
+                    Button(action: {
+                        self.isFavorite = false
+                        print("isFavorite:\(isFavorite)")
+                    }) {
+                        Image(systemName: "star.fill")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundStyle(.yellow)
+                    }
+                } else {
+                    Button(action: {
+                        self.isFavorite = true
+                        print("isFavorite:\(isFavorite)")
+                    }) {
+                        Image(systemName: "star")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .foregroundStyle(.yellow)
+                    }
+                }
+            }
+            HStack(alignment: .top) {
                 if (self.pokemonDetail != nil) {
                     ForEach(self.pokemonDetail?.types ?? [], id: \.id) { type in
                         ZStack {
@@ -82,25 +116,31 @@ struct PokemonDetailView: View {
                     }
                 }
             }
-        }
-        if (self.isFavorite) {
-            Button("お気に入り解除") {
-                self.isFavorite = false
-                print("isFavorite:\(isFavorite)")
-            }
-        } else {
-            Button("お気に入りに追加") {
-                guard let player = self.player else { return }
-                player.play()
-                self.isFavorite = true
-                print("isFavorite:\(isFavorite)")
-            }
-        }
-        Text(isFavorite.description)
 
-        Spacer(minLength: 300)
+            HStack {
+                if (pokemonDetail != nil) {
+                    Text(" 高さ:\(String(format: "%.1f",pokemonDetail!.height/10))m ")
+                        .font(.title2)
+                        .background(.gray.opacity(0.2))
+                    Text(" 重さ:\(String(format: "%.1f",pokemonDetail!.weight/10))kg ")
+                        .font(.title2)
+                        .background(.gray.opacity(0.2))
+                }
+            }
+            HStack {
+                Spacer(minLength: 20)
+                Text("\(self.flavorText)")
+                    .font(.headline)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .redacted(reason: self.flavorText == "loading..." ? .placeholder : [] )
+                Spacer(minLength: 20)
+            }
+        }
+
+        //        Spacer(minLength: 300)
     }
 }
+
 
 
 #Preview {

@@ -28,6 +28,8 @@ struct Pokemon: Decodable {
 struct PokemonDetail: Decodable,Identifiable {
     let id: Int
     var types: [PokemonType]
+    let height: Double
+    let weight: Double
 
     var imageURL: URL? {
         return URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png")
@@ -43,4 +45,29 @@ struct PokemonType: Decodable {
 struct TypeDetails: Decodable {
     let name: String
     let url: String
+}
+
+struct PokemonSpecies: Decodable {
+    let names: [PropDetails]
+    let flavor_text_entries: [FlavorDetails]
+}
+
+struct PropDetails: Decodable {
+    let language: LanguageDetails
+    let name: String
+}
+
+struct FlavorDetails: Decodable {
+    let flavor_text: String
+    let language: LanguageDetails
+    let version: LanguageDetails
+}
+
+struct LanguageDetails: Decodable {
+    let name: String
+    let url: String
+}
+
+struct PokemonTypeResponse: Decodable {
+    let names: [PropDetails]
 }

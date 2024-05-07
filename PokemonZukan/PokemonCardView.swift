@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct PokemonCardView: View {
+    @State var pokemonName: String = "Loading..."
     let pokemon: Pokemon
 
     var body: some View {
-        NavigationLink(destination: PokemonDetailView(pokemonId: pokemon.id ?? 0, name:pokemon.name.capitalized, url: pokemon.url)){
+        NavigationLink(destination: PokemonDetailView(pokemonId: pokemon.id ?? 0, name:pokemonName, url: pokemon.url)){
             HStack {
                 AsyncImage(url: pokemon.imageURL) { image in
                     image.resizable()
@@ -22,10 +23,30 @@ struct PokemonCardView: View {
                 }
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100)
-
-                Text(pokemon.name.capitalized)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                    .fontWeight(.medium)
+                VStack {
+                    HStack {
+                        Text("No.\(pokemon.id?.description ?? "")")
+                        Spacer()
+                    }
+                    HStack {
+                        Text(pokemonName)
+                            .redacted(reason: pokemonName != "Loading..." ? [] : .placeholder)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                            .fontWeight(.medium)
+                        Spacer()
+                    }
+                }
+            }
+        }
+        .onAppear() {
+            PokeLoader().loadPokemonSpecies(id: pokemon.id ?? 0) { result in
+                switch result {
+                case .success(let pokemons):
+                    print(pokemons)
+                    self.pokemonName = pokemons.names.filter({(pokemon) in pokemon.language.name == "ja"}).first?.name ?? ""
+                case .failure(let error):
+                    print(error)
+                }
             }
         }
     }

@@ -10,7 +10,13 @@ import SwiftUI
 struct PokemonListView: View {
     @State var isShowFavoriteList = false
     @State var currentTime = ""
+    @State var currentPageIndex = 0
     @State var pokemonList: [Pokemon] = []
+    @State var filteredPokemonList: [Pokemon] = []
+
+    func setFilteredPokemonList(index: Int) {
+        self.filteredPokemonList = pokemonList.filter({ (pokemon) in pokemon.id ?? 0 >= (currentPageIndex * 100) + 1 && pokemon.id ?? 0 < (currentPageIndex + 1) * 100})
+    }
 
     var body: some View {
         VStack {
@@ -24,15 +30,38 @@ struct PokemonListView: View {
                 }) {
                     Image(systemName: "text.badge.star")
                         .resizable()
-                        .frame(width:20,height: 20)
+                        .frame(width:20, height: 20)
                 }
                 Spacer()
-                //                Image(.pokemonLogo)
-                //                    .resizable()
-                //                    .aspectRatio(contentMode: .fit)
             }
             NavigationStack {
-                List(pokemonList,id: \.name) { pokemon in
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        self.currentPageIndex -= 1
+                        setFilteredPokemonList(index: self.currentPageIndex)
+                    }) {
+                        Image(systemName: "arrow.left")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    }
+                    .disabled(currentPageIndex < 1)
+                    Spacer()
+                    Text("No.\(filteredPokemonList.first?.id?.description ?? "nil")~No.\(filteredPokemonList.last?.id?.description ?? "nil")")
+                    Text("/ \((self.currentPageIndex + 1).description)ページ目")
+                    Spacer()
+                    Button(action: {
+                        self.currentPageIndex += 1
+                        setFilteredPokemonList(index: self.currentPageIndex)
+                    }) {
+                        Image(systemName: "arrow.right")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                    }
+                    .disabled(filteredPokemonList.count < 99)
+                    Spacer()
+                }
+                List(filteredPokemonList,id: \.name) { pokemon in
                     PokemonCardView(pokemon: pokemon)
                 }
             }
@@ -46,6 +75,7 @@ struct PokemonListView: View {
                     switch result {
                     case .success(let pokemonList):
                         self.pokemonList = pokemonList
+                        setFilteredPokemonList(index: self.currentPageIndex)
 
                     case .failure(let error):
                         print(error)

@@ -9,7 +9,7 @@ import Alamofire
 
 class PokeLoader {
     func loadPokemonList (completion: @escaping (Result<[Pokemon], Error>) -> ()) {
-        AF.request("https://pokeapi.co/api/v2/pokemon").responseDecodable(of: PokemonList.self) { response in
+        AF.request("https://pokeapi.co/api/v2/pokemon?limit=2000").responseDecodable(of: PokemonList.self) { response in
 
             switch response.result {
             case .success(let pokemonList):
@@ -33,4 +33,34 @@ class PokeLoader {
             print(response.result)
         }
     }
+
+    func loadPokemonSpecies (id: Int,completion: @escaping (Result<PokemonSpecies, Error>) -> ()) {
+        AF.request("https://pokeapi.co/api/v2/pokemon-species/\(id.description)/").responseDecodable(of: PokemonSpecies.self) { response in
+
+            switch response.result {
+            case .success(let pokemonSpecies):
+                completion(.success(pokemonSpecies.self))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+            print(response.result)
+        }
+    }
+
+    func loadPokemonTypeJP (url: String,completion: @escaping (Result<[PropDetails], Error>) -> ()) {
+        AF.request(url).responseDecodable(of: PokemonTypeResponse.self) { response in
+
+            switch response.result {
+            case .success(let responses):
+                completion(.success(responses.names))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+            print(response.result)
+        }
+    }
+
+//    func postFavoritePokemon(id: Int) {
+//        AF.request("")
+//    }
 }
