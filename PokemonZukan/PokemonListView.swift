@@ -89,20 +89,40 @@ struct PokemonListView: View {
 }
 
 struct FavoriteListView: View {
+    @StateObject private var favoriteRepository = FavoriteRepository()
     @Environment(\.dismiss) private var dismiss
+    @State private var favoriteDataList: [FavoriteData] = [] 
 
     var body: some View {
-        HStack {
-            Spacer()
-            Button(action: {
-                dismiss()
-            }) {
-                Image(systemName: "xmark.circle")
+        VStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    dismiss()
+                }) {
+                    Image(systemName: "xmark.circle")
+                        .font(.title)
+                }
+                .padding()
+            }
+
+            List(favoriteDataList, id: \.pokemonId) { favoriteData in
+                Text("Pokemon ID: \(favoriteData.pokemonId)")
+            }
+            .onAppear {
+                Task {
+                    await fetchAllFavoriteData()
+                }
             }
         }
-        Spacer()
+        .padding()
+    }
+
+    private func fetchAllFavoriteData() async {
+        favoriteDataList = await favoriteRepository.fetchAll()
     }
 }
+
 
 #Preview {
     PokemonListView()

@@ -14,6 +14,8 @@ struct PokemonDetailView: View {
     @State private var player: AVPlayer?
     @State var pokemonTypesJP: [String] = [""]
     @State var flavorText: String = "loading..."
+    @StateObject private var favoriteRepository = FavoriteRepository()
+//    @State private var favoriteData: FavoriteData = FavoriteData(pokemonId: 1)
 
     let pokemonId: Int
     let name: String
@@ -69,8 +71,11 @@ struct PokemonDetailView: View {
                     .redacted(reason: self.pokemonDetail == nil ? .placeholder : [])
                 if (self.isFavorite) {
                     Button(action: {
-                        self.isFavorite = false
-                        print("isFavorite:\(isFavorite)")
+                        Task {
+                            await favoriteRepository.append(with: FavoriteData(pokemonId: pokemonId))
+                            self.isFavorite = false
+                            print("isFavorite:\(isFavorite)")
+                        }
                     }) {
                         Image(systemName: "star.fill")
                             .resizable()
@@ -79,8 +84,11 @@ struct PokemonDetailView: View {
                     }
                 } else {
                     Button(action: {
-                        self.isFavorite = true
-                        print("isFavorite:\(isFavorite)")
+                        Task {
+                            await favoriteRepository.append(with: FavoriteData(pokemonId: pokemonId))
+                            self.isFavorite = true
+                            print("isFavorite:\(isFavorite)")
+                        }
                     }) {
                         Image(systemName: "star")
                             .resizable()
